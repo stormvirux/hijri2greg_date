@@ -1,5 +1,4 @@
-require "hijri2greg_date/version"
-
+#require "hijri2greg_date/version"
 require 'time'
 require 'date'
 
@@ -8,7 +7,7 @@ class Time
     return Hijri2gregDate.Gregorian2Hijri(self.to_s.split(" ")[0].split("-"))
   end
   def to_greg
-    return HijriDate2greg.Hijri2Gregorian(self.to_s.split(" ")[0].split("-"))
+    return Hijri2gregDate.Hijri2Gregorian(self.to_s.split(" ")[0].split("-"))
   end
 end
 
@@ -97,4 +96,5 @@ class Hijri2gregDate
       return [y, m, d].join("-")
   end
 end
+
 
